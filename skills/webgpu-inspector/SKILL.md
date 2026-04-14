@@ -10,12 +10,6 @@ Debug WebGPU applications from the command line using `cli-anything-webgpu-inspe
 ## Setup
 
 ```bash
-pip install cli-anything-webgpu-inspector
-python -m playwright install chromium
-```
-
-If installing from source:
-```bash
 git clone --recurse-submodules https://github.com/scasekar/webgpu-inspector-cli
 cd webgpu-inspector-cli/agent-harness
 pip install -e .

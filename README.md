@@ -23,12 +23,6 @@ A Claude Code plugin that enables AI agents to debug WebGPU applications from th
 The plugin requires the WebGPU Inspector CLI tool:
 
 ```bash
-pip install cli-anything-webgpu-inspector
-python -m playwright install chromium
-```
-
-Or from source:
-```bash
 git clone --recurse-submodules https://github.com/scasekar/webgpu-inspector-cli
 cd webgpu-inspector-cli/agent-harness && pip install -e .
 python -m playwright install chromium
