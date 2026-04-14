@@ -35,7 +35,6 @@ You can launch a browser, inject the WebGPU Inspector into any web page, and pro
 - Report findings with specific object IDs and line references
 - If the CLI is not installed, install it first:
   ```bash
-  git clone --recurse-submodules https://github.com/scasekar/webgpu-inspector-cli /tmp/webgpu-inspector-cli
-  cd /tmp/webgpu-inspector-cli/agent-harness && pip3 install -e .
+  pip3 install webgpu-inspector-cli
   python3 -m playwright install chromium
   ```

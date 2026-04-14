@@ -12,8 +12,7 @@ Debug a WebGPU web application using the WebGPU Inspector CLI.
 
 Ensure the CLI is installed. Check with `which webgpu-inspector-cli`. If not found, install:
 ```bash
-git clone --recurse-submodules https://github.com/scasekar/webgpu-inspector-cli /tmp/webgpu-inspector-cli
-cd /tmp/webgpu-inspector-cli/agent-harness && pip3 install -e .
+pip3 install webgpu-inspector-cli
 python3 -m playwright install chromium
 ```
 
