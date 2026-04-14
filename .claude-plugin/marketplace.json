@@ -1,0 +1,21 @@
+{
+  "name": "webgpu-inspector-plugin",
+  "owner": {
+    "name": "Arvind Sekar",
+    "email": "asekar@spatialcognition.com"
+  },
+  "metadata": {
+    "description": "Debug WebGPU applications from the command line — inspect GPU objects, shaders, textures, and validation errors."
+  },
+  "plugins": [
+    {
+      "name": "webgpu-inspector",
+      "source": ".",
+      "description": "Debug WebGPU applications from the command line — inspect GPU objects, view shaders, capture frames, check validation errors, and monitor performance.",
+      "author": {
+        "name": "Arvind Sekar"
+      },
+      "category": "development"
+    }
+  ]
+}
