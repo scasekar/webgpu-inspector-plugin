@@ -1,7 +1,7 @@
 ---
 description: Launch the WebGPU Inspector CLI to debug a WebGPU web application. Provide a URL to inspect.
 argument-hint: <url>
-allowed-tools: Bash(cli-anything-webgpu-inspector:*), Bash(pip install:*), Bash(python -m playwright:*), Read, Write
+allowed-tools: Bash(webgpu-inspector-cli:*), Bash(pip install:*), Bash(python -m playwright:*), Read, Write
 ---
 
 # /webgpu-inspect
@@ -10,7 +10,7 @@ Debug a WebGPU web application using the WebGPU Inspector CLI.
 
 ## Prerequisites
 
-Ensure the CLI is installed. Check with `which cli-anything-webgpu-inspector`. If not found, install:
+Ensure the CLI is installed. Check with `which webgpu-inspector-cli`. If not found, install:
 ```bash
 git clone --recurse-submodules https://github.com/scasekar/webgpu-inspector-cli /tmp/webgpu-inspector-cli
 cd /tmp/webgpu-inspector-cli/agent-harness && pip3 install -e .
@@ -21,19 +21,19 @@ python3 -m playwright install chromium
 
 1. **Launch** the browser with the target URL:
    ```bash
-   cli-anything-webgpu-inspector browser launch --url <URL>
+   webgpu-inspector-cli browser launch --url <URL>
    ```
 
 2. **Diagnose** — Run these checks in order:
    ```bash
    # Check for validation errors (most common issue)
-   cli-anything-webgpu-inspector --json errors list
+   webgpu-inspector-cli --json errors list
 
    # Get GPU state overview
-   cli-anything-webgpu-inspector --json status summary
+   webgpu-inspector-cli --json status summary
 
    # List all GPU objects
-   cli-anything-webgpu-inspector --json objects list
+   webgpu-inspector-cli --json objects list
    ```
 
 3. **Investigate** based on findings:
@@ -48,7 +48,7 @@ python3 -m playwright install chromium
 
 5. **Clean up:**
    ```bash
-   cli-anything-webgpu-inspector browser close
+   webgpu-inspector-cli browser close
    ```
 
 ## Tips

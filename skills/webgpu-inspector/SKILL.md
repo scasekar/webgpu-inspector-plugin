@@ -5,7 +5,7 @@ description: Use when debugging WebGPU rendering issues, investigating GPU valid
 
 # WebGPU Inspector CLI
 
-Debug WebGPU applications from the command line using `cli-anything-webgpu-inspector`. Launches a browser, injects the WebGPU Inspector, and provides structured access to all GPU state.
+Debug WebGPU applications from the command line using `webgpu-inspector-cli`. Launches a browser, injects the WebGPU Inspector, and provides structured access to all GPU state.
 
 ## Setup
 
@@ -16,7 +16,7 @@ pip install -e .
 python -m playwright install chromium
 ```
 
-Verify: `cli-anything-webgpu-inspector --help`
+Verify: `webgpu-inspector-cli --help`
 
 ## Debugging Workflow
 
@@ -24,35 +24,35 @@ Always use `--json` for machine-readable output.
 
 ```bash
 # 1. Launch browser with target app
-cli-anything-webgpu-inspector browser launch --url <URL>
+webgpu-inspector-cli browser launch --url <URL>
 
 # 2. Check for validation errors first (most common issue)
-cli-anything-webgpu-inspector --json errors list
+webgpu-inspector-cli --json errors list
 
 # 3. Get state overview
-cli-anything-webgpu-inspector --json status summary
+webgpu-inspector-cli --json status summary
 
 # 4. Inspect specific objects
-cli-anything-webgpu-inspector --json objects list
-cli-anything-webgpu-inspector --json objects list --type Texture
-cli-anything-webgpu-inspector --json objects inspect --id <ID>
+webgpu-inspector-cli --json objects list
+webgpu-inspector-cli --json objects list --type Texture
+webgpu-inspector-cli --json objects inspect --id <ID>
 
 # 5. Read shader source code
-cli-anything-webgpu-inspector --json shaders list
-cli-anything-webgpu-inspector shaders view --id <ID>
+webgpu-inspector-cli --json shaders list
+webgpu-inspector-cli shaders view --id <ID>
 
 # 6. Capture a frame to inspect GPU commands
-cli-anything-webgpu-inspector --json capture frame
-cli-anything-webgpu-inspector --json capture commands
+webgpu-inspector-cli --json capture frame
+webgpu-inspector-cli --json capture commands
 
 # 7. Inspect texture contents (save as PNG)
-cli-anything-webgpu-inspector capture texture --id <ID> -o debug.png
+webgpu-inspector-cli capture texture --id <ID> -o debug.png
 
 # 8. Hot-reload a shader fix
-cli-anything-webgpu-inspector shaders compile --id <ID> --file fixed_shader.wgsl
+webgpu-inspector-cli shaders compile --id <ID> --file fixed_shader.wgsl
 
 # 9. Clean up
-cli-anything-webgpu-inspector browser close
+webgpu-inspector-cli browser close
 ```
 
 ## Command Reference
