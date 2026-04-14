@@ -10,7 +10,10 @@
   "plugins": [
     {
       "name": "webgpu-inspector",
-      "source": ".",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/scasekar/webgpu-inspector-plugin.git"
+      },
       "description": "Debug WebGPU applications from the command line — inspect GPU objects, view shaders, capture frames, check validation errors, and monitor performance.",
       "author": {
         "name": "Arvind Sekar"
