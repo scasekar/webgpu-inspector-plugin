@@ -1,7 +1,7 @@
 {
   "name": "webgpu-inspector",
   "description": "Debug WebGPU applications from the command line. Inspect GPU objects, view shaders, capture frames, check validation errors, and monitor performance — all via CLI commands that AI agents can use programmatically.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": {
     "name": "Arvind Sekar",
     "email": "asekar@spatialcognition.com"
